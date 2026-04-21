@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>花影shop - ゲーム一覧（1ページ目）</title>
+  <style>
+    body { 
+      font-family: Arial, "Hiragino Sans", sans-serif; 
+      background: #f9f5f0; 
+      margin: 0; 
+      padding: 0; 
+    }
+    header { 
+      background: #6d4c41; 
+      color: white; 
+      text-align: center; 
+      padding: 15px; 
+    }
+    h1 { margin: 0; font-size: 26px; }
+    .subtitle { margin: 5px 0 0; font-size: 16px; }
+    .container { padding: 15px; }
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      background: white; 
+      border-radius: 10px; 
+      overflow: hidden; 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    }
+    th, td { 
+      padding: 14px 10px; 
+      border-bottom: 1px solid #eee; 
+    }
+    th { 
+      background: #6d4c41; 
+      color: white; 
+      text-align: center; 
+    }
+    .icon { width: 48px; height: 48px; border-radius: 8px; }
+    .game-name { font-weight: 600; color: #3e2723; }
+    .count { font-weight: bold; color: #d32f2f; text-align: center; }
+    tr:hover { background: #fff8e1; }
+    .pagination { 
+      text-align: center; 
+      margin: 25px 0 15px; 
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #d32f2f;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 17px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(211, 47, 47, 0.3);
+    }
+    .btn:hover {
+      background: #b71c1c;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>🌸 花影shop</h1>
+    <p class="subtitle">ゲーム一覧（1ページ目）</p>
+  </header>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:70px;">アイコン</th>
+          <th>ゲーム名</th>
+          <th style="width:110px;">出品数</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=アナデン" class="icon"></td><td class="game-name">アナデン</td><td class="count">11件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=あんスタ" class="icon"></td><td class="game-name">あんスタMusic</td><td class="count">6件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF4081/FFF?text=NIKKE" class="icon"></td><td class="game-name">NIKKE</td><td class="count">25件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=アズレン" class="icon"></td><td class="game-name">アズールレーン</td><td class="count">7件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/4CAF50/FFF?text=アークナイツ" class="icon"></td><td class="game-name">アークナイツ</td><td class="count">8件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/2196F3/FFF?text=荒野行動" class="icon"></td><td class="game-name">荒野行動</td><td class="count">5件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF5722/FFF?text=イナズマイレブン" class="icon"></td><td class="game-name">イナズマイレブン</td><td class="count">3件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=ウマ娘" class="icon"></td><td class="game-name">ウマ娘 プリティーダービー</td><td class="count">8件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=オセロニア" class="icon"></td><td class="game-name">オセロニア</td><td class="count">5件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF5722/FFF?text=オラドラ" class="icon"></td><td class="game-name">オラドラ</td><td class="count">4件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=学マス" class="icon"></td><td class="game-name">学マス</td><td class="count">8件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/4CAF50/FFF?text=グラクロ" class="icon"></td><td class="game-name">グラクロ</td><td class="count">6件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=グラブル" class="icon"></td><td class="game-name">グランブルーファンタジー</td><td class="count">10件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/03A9F4/FFF?text=原神" class="icon"></td><td class="game-name">原神</td><td class="count">12件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/F44336/FFF?text=崩壊3rd" class="icon"></td><td class="game-name">崩壊3rd</td><td class="count">6件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/03A9F4/FFF?text=崩壊SR" class="icon"></td><td class="game-name">崩壊：スターレイル</td><td class="count">9件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=黒い砂漠" class="icon"></td><td class="game-name">黒い砂漠</td><td class="count">15件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF5722/FFF?text=こち亀" class="icon"></td><td class="game-name">こちら葛飾区亀有公園前派出所</td><td class="count">2件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FFC107/FFF?text=サマナーズ" class="icon"></td><td class="game-name">サマナーズウォー</td><td class="count">4件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=ブルアカ" class="icon"></td><td class="game-name">ブルーアーカイブ</td><td class="count">14件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF5722/FFF?text=ブルーロック" class="icon"></td><td class="game-name">ブルーロックPWC</td><td class="count">4件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=ブレオダ" class="icon"></td><td class="game-name">ブレオダ</td><td class="count">8件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FFC107/FFF?text=プロスピ" class="icon"></td><td class="game-name">プロ野球スピリッツA</td><td class="count">9件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/F44336/FFF?text=ヘブバン" class="icon"></td><td class="game-name">ヘブンバーンズレッド</td><td class="count">5件</td></tr>
+        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=ポケカ" class="icon"></td><td class="game-name">Pokémon TCG Pocket</td><td class="count">7件</td></tr>
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <a href="page2.html" class="btn">次のページへ →</a>
+    </div>
+  </div>
+
+</body>
+</html>
