@@ -100,6 +100,8 @@
 </div>
 
    　ゲーム一覧（⬇50音順となっております⬇）</p>
+  <header>
+   <input type="text" id="searchInput" placeholder="ゲーム名で検索..." style="width: 90%; padding: 10px; margin: 10px; font-size: 16px;">
   </header>
 
   <div class="container">
@@ -149,6 +151,23 @@
       </tbody>
     </table>
   </div>
+<script>
+const input = document.getElementById("searchInput");
 
+input.addEventListener("keyup", function() {
+  const filter = input.value.toLowerCase();
+  const rows = document.querySelectorAll("tbody tr");
+
+  rows.forEach(row => {
+    const gameName = row.children[1].innerText.toLowerCase(); // ←ここ重要
+
+    if (gameName.includes(filter)) {
+      row.style.display = "";
+    } else {
+      row.style.display = "none";
+    }
+  });
+});
+</script>
 </body>
 </html>
