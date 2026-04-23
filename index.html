@@ -11,13 +11,19 @@
 
 }
 
-table, tr, td, th {
+table {
+
+  writing-mode: horizontal-tb !important;
+
+}
+
+td, th {
 
   writing-mode: horizontal-tb !important;
 
   white-space: nowrap !important;
 
-  word-break: normal !important;
+  word-break: keep-all !important;
 
 }{
       font-family: -apple-system, Arial, sans-serif;
