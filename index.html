@@ -324,8 +324,15 @@ input {
 
 <script>
 function toggleDetail(id) {
-  const el = document.getElementById(id);
-  el.style.display = el.style.display === "block" ? "none" : "block";
+    // ↓ この1行を必ず最初に追加してください
+    event.stopPropagation(); 
+
+    const detail = document.getElementById(id);
+    if (detail.style.display === 'block') {
+        detail.style.display = 'none';
+    } else {
+        detail.style.display = 'block';
+    }
 }
 
 const input = document.getElementById("searchInput");
