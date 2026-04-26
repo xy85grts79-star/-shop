@@ -1,222 +1,196 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>花影shop - ゲーム一覧</title>
-  <style>
-td {
-  writing-mode: horizontal-tb !important;
-  white-space: nowrap !important;
-  word-break: normal !important;
-}
-    body {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>花影shop</title>
+
+<style>
+body {
+  font-family: -apple-system, Arial;
   margin: 0;
-  font-size: 14px;
+  background: #f9f5f0;
 }
 
-.container {
-  padding: 10px;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-th, td {
-  padding: 10px 5px;
-  font-size: 13px;
+header {
+  background: #6d4c41;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }
 
 input {
-  width: 100%;
-  padding: 12px;
-  font-size: 14px;
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
   border-radius: 8px;
   border: none;
 }
 
-/* スマホ用 */
-@media screen and (max-width: 600px) {
-  th:nth-child(1),
-  td:nth-child(1) {
-    width: 60px;
-  }
+/* 注意書き */
+.description {
+  background: white;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+}
 
-  th, td {
-    font-size: 12px;
-    padding: 8px 3px;
-  }
-}{
-      font-family: -apple-system, Arial, sans-serif;
-      background: #f9f5f0;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: #6d4c41;
-      color: white;
-      text-align: center;
-      padding: 20px 10px;
-    }
-    h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    .container {
-      padding: 15px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
-    th, td {
-      padding: 16px 12px;
-      border-bottom: 1px solid #eee;
-    }
-    th {
-      background: #6d4c41;
-      color: white;
-      text-align: center;
-    }
-    .icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-    }
-    .game-name {
-      font-weight: 600;
-      color: #333;
-    }
-    .count {
-      font-weight: bold;
-      color: #d32f2f;
-      text-align: center;
-    }
-    .description pre {
+.description pre {
   white-space: pre-wrap;
-  word-break: break-word;
-  overflow-wrap: break-word; /* ←追加 */
+  font-size: 13px;
 }
-#searchInput {
 
-  writing-mode: horizontal-tb !important;
-
+/* カード */
+.card {
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
 }
-  </style>
+
+.card-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon {
+  width: 48px;
+  border-radius: 8px;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.count {
+  color: red;
+}
+
+.detail {
+  display: none;
+  background: #eee;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>🎮花影shop🎮</h1>
-    <p style="margin:8px 0 0; font-size:18px;">
-    　　　
+<header>
+<h2>🎮花影shop🎮</h2>
+<input id="searchInput" placeholder="ゲーム名で検索">
+</header>
+
+<!-- 注意書き -->
 <div class="description">
 <pre>
 ⚠️注意事項(超重要)⚠️
-───────────────────────────────────
-現在私のアイコン等を使った偽アカウントがいるため実績が荒らされている状況です。
-2026年1月までの実績は私のものですがそれ以外のものは私とは一切関係がないためご注意ください🙇‍♂
-仮に偽アカウントに詐欺られた場合でも当店では一切の責任は負えませんのであらかじめご了承ください。
-───────────────────────────────────
+────────────────────────
+現在私のアイコン等を使った偽アカウントがいるため実績が荒らされています。
+2026年1月までの実績のみ当店のものです。
+
 はじめに
-───────────────────────────────────
+────────────────────────
 ご覧いただきありがとうございます🙇‍♂
-こちらのサイトは花影の石垢サイトとなっております。
+石垢販売サイトです。
 
-ご購入される場合は以下の三点をTwitterのDMに送信してください。
+購入時はTwitterのDMに以下を送信してください。
+①商品名
+②機種
+③予算
 
-①購入希望の商品（例：モンストの①番）
-②機種（iPhoneかAndroid）
-③予算（例：予算〇〇〇円です）
-
-───────────────────────────────────
 🔥当店の特徴🔥
-💫安心･安全･即対応
-💫実績は500件以上（2026年4月現在）
-💫丁寧で誠心誠意な対応
-💫豊富な品揃え･安心価格
-
-石垢の事はぜひ当店にお任せください‼️
-ご依頼心よりお待ちしております🙇‍♂
+・安心･安全･即対応
+・実績500件以上
+・丁寧対応
 </pre>
 </div>
 
-   　ゲーム一覧（⬇50音順となっております⬇）</p>
-  <header>
-   <input type="text"
-id="searchInput"
-placeholder="ゲーム名で検索..."
-style="width: 90%; padding: 10px; margin: 10px; font-size: 16px; writing-mode: horizontal-tb; word-break: normal; white-space: nowrap;">
-  </header>
+<div style="padding:10px; font-weight:bold;">
+ゲーム一覧（50音順）
+</div>
 
-  <div class="container">
-    <table>
-      <thead>
-        <tr>
-          <th style="width:65px;">アイコン</th>
-          <th>ゲーム名</th>
-          <th style="width:100px;">在庫</th>
-          <th style="width:100px;">出品数</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-        <td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=アナデン" class="icon"></td><td class="game-name">アナデン</td><td class="stock ok">在庫あり</td><td class="count">11件</td></tr>
-        <td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=あんスタ" class="icon"></td><td class="game-name">あんスタMusic</td><td class="stock ok">在庫あり</td><td class="count">6件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF4081/FFF?text=NIKKE" class="icon"></td><td class="game-name">NIKKE</td><td class="stock ok">在庫あり</td><td class="count">25件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=アズレン" class="icon"></td><td class="game-name">アズールレーン</td><td class="stock ok">在庫あり</td><td class="count">7件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/4CAF50/FFF?text=アークナイツ" class="icon"></td><td class="game-name">アークナイツ</td><td class="stock ok">在庫あり</td><td class="count">8件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=ウマ娘" class="icon"></td><td class="game-name">ウマ娘</td><td class="stock ok">在庫あり</td><td class="count">8件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=オセロニア" class="icon"></td><td class="game-name">オセロニア</td><td class="stock ok">在庫あり</td><td class="count">5件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF5722/FFF?text=オラドラ" class="icon"></td><td class="game-name">オラドラ</td><td class="stock ok">在庫あり</td><td class="count">4件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=学マス" class="icon"></td><td class="game-name">学マス</td><td class="stock ok">在庫あり</td><td class="count">8件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/4CAF50/FFF?text=グラクロ" class="icon"></td><td class="game-name">グラクロ</td><td class="stock ok">在庫あり</td><td class="count">6件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=グラブル" class="icon"></td><td class="game-name">グラブル</td><td class="stock ok">在庫あり</td><td class="count">10件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/03A9F4/FFF?text=原神" class="icon"></td><td class="game-name">原神</td><td class="stock ok">在庫なし</td><td class="count">12件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/F44336/FFF?text=崩壊3rd" class="icon"></td><td class="game-name">崩壊3rd</td><td class="stock ok">在庫なし</td><td class="count">6件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/03A9F4/FFF?text=崩壊SR" class="icon"></td><td class="game-name">崩壊：スターレイル</td><td class="stock ok">在庫あり</td><td class="count">9件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=ブルアカ" class="icon"></td><td class="game-name">ブルーアーカイブ</td><td class="stock ok">在庫あり</td><td class="count">14件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF5722/FFF?text=ブルーロック" class="icon"></td><td class="game-name">ブルーロックPWC</td><td class="stock ok">在庫あり</td><td class="count">4件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=ブレオダ" class="icon"></td><td class="game-name">ブレオダ</td><td class="stock ok">在庫あり</td><td class="count">8件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FFC107/FFF?text=プロスピ" class="icon"></td><td class="game-name">プロスピ</td><td class="stock ok">在庫あり</td><td class="count">9件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/F44336/FFF?text=ヘブバン" class="icon"></td><td class="game-name">ヘブバン</td><td class="stock ok">在庫あり</td><td class="count">5件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=ポケカ" class="icon"></td><td class="game-name">ポケポケ</td><td class="stock ok">在庫あり</td><td class="count">7件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/00BCD4/FFF?text=ハイドリ" class="icon"></td><td class="game-name">ハイドリ</td><td class="stock ok">在庫あり</td><td class="count">4件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/F44336/FFF?text=ドッカン" class="icon"></td><td class="game-name">ドッカンバトル</td><td class="stock ok">在庫あり</td><td class="count">9件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=ドラタク" class="icon"></td><td class="game-name">ドラクエタクト</td><td class="stock ok">在庫あり</td><td class="count">7件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=ディスガイア" class="icon"></td><td class="game-name">ディスガイアRPG</td><td class="stock ok">在庫あり</td><td class="count">1件</td></tr>
-        <tr><td style="text-align:center"><img src="https://mixi.co.jp/app/uploads/old/entryimage/MS_App_icon_new.png
-" class="icon"></td><td class="game-name">モンスト</td><td class="stock ok">在庫あり</td><td class="count">20件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/03A9F4/FFF?text=鳴潮" class="icon"></td><td class="game-name">鳴潮</td><td class="stock ok">在庫あり</td><td class="count">4件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/F44336/FFF?text=FGO" class="icon"></td><td class="game-name">FGO</td><td class="stock ok">在庫あり</td><td class="count">2件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF5722/FFF?text=パズドラ" class="icon"></td><td class="game-name">パズドラ</td><td class="stock ok">在庫あり</td><td class="count">12件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=まどマギ" class="icon"></td><td class="game-name">まどドラ</td><td class="stock ok">在庫あり</td><td class="count">4件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=SDガンダム" class="icon"></td><td class="game-name">Gジェネ</td><td class="stock ok">在庫あり</td><td class="count">1件</td></tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF4081/FFF?text=刀剣乱舞" class="icon"></td><td class="game-name">刀剣乱舞-ONLINE-</td><td class="stock ok">在庫あり</td><td class="count">7件</td></tr>
-            
-      </tbody>
-    </table>
-  </div>
+<div id="cardList">
+
+<!-- アナデン -->
+<div class="card" data-name="アナデン" onclick="toggleDetail('d1')">
+<div class="card-top">
+<img src="https://via.placeholder.com/48/FF9800/FFF?text=アナ" class="icon">
+<div><div class="name">アナデン</div><div>在庫あり</div></div>
+</div>
+<div class="count">11件</div>
+</div>
+<div id="d1" class="detail">石80000↑ / 3500円</div>
+
+<!-- あんスタ -->
+<div class="card" data-name="あんすた" onclick="toggleDetail('d2')">
+<div class="card-top">
+<img src="https://via.placeholder.com/48/E91E63/FFF?text=あん" class="icon">
+<div><div class="name">あんスタMusic</div><div>在庫あり</div></div>
+</div>
+<div class="count">6件</div>
+</div>
+<div id="d2" class="detail">1500円〜</div>
+
+<!-- NIKKE -->
+<div class="card" data-name="nikke" onclick="toggleDetail('d3')">
+<div class="card-top">
+<img src="https://via.placeholder.com/48/FF4081/FFF?text=NIKKE" class="icon">
+<div><div class="name">NIKKE</div><div>在庫あり</div></div>
+</div>
+<div class="count">25件</div>
+</div>
+<div id="d3" class="detail">SSR多数 / 2000円〜</div>
+
+<!-- モンスト -->
+<div class="card" data-name="モンスト" onclick="toggleDetail('d4')">
+<div class="card-top">
+<img src="https://mixi.co.jp/app/uploads/old/entryimage/MS_App_icon_new.png" class="icon">
+<div><div class="name">モンスト</div><div>在庫あり</div></div>
+</div>
+<div class="count">20件</div>
+</div>
+<div id="d4" class="detail">運極多数 / 即対応</div>
+
+<!-- パズドラ -->
+<div class="card" data-name="パズドラ" onclick="toggleDetail('d5')">
+<div class="card-top">
+<img src="https://via.placeholder.com/48/FF5722/FFF?text=パズ" class="icon">
+<div><div class="name">パズドラ</div><div>在庫あり</div></div>
+</div>
+<div class="count">12件</div>
+</div>
+<div id="d5" class="detail">高ランク垢</div>
+
+<!-- 必要ならここに他ゲームも追加できる -->
+
+</div>
+
 <script>
+function toggleDetail(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
 const input = document.getElementById("searchInput");
 
-input.addEventListener("keyup", function() {
-  const filter = input.value.toLowerCase();
-  const rows = document.querySelectorAll("tbody tr");
+input.addEventListener("input", () => {
+  const keyword = input.value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
 
-  rows.forEach(row => {
-    const gameName = row.children[1].innerText.toLowerCase(); // ←ここ重要
+  cards.forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+    const detail = card.nextElementSibling;
 
-    if (gameName.includes(filter)) {
-      row.style.display = "";
+    if (name.includes(keyword)) {
+      card.style.display = "";
+      if (detail) detail.style.display = "none";
     } else {
-      row.style.display = "none";
+      card.style.display = "none";
+      if (detail) detail.style.display = "none";
     }
   });
 });
