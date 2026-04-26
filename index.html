@@ -108,10 +108,6 @@ input {
   writing-mode: horizontal-tb !important;
 
 }
-.detail {
-  display: none;
-  background: #f5f5f5;
-}
   </style>
 </head>
 <body>
@@ -171,7 +167,7 @@ style="width: 90%; padding: 10px; margin: 10px; font-size: 16px; writing-mode: h
       </thead>
       <tbody>
         <tr>
-        <tr onclick="toggleDetail('anaden')"><td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=アナデン" class="icon"></td><td class="game-name">アナデン</td><td class="stock ok">在庫あり</td><td class="count">11件</td></tr><tr id="anaden" class="detail">
+        <td style="text-align:center"><img src="https://via.placeholder.com/48/FF9800/FFF?text=アナデン" class="icon"></td><td class="game-name">アナデン</td><td class="stock ok">在庫あり</td><td class="count">11件</td></tr><tr id="anaden" class="detail">
 
   <td colspan="4">
 
@@ -182,7 +178,7 @@ style="width: 90%; padding: 10px; margin: 10px; font-size: 16px; writing-mode: h
   </td>
 
 </tr>
-        <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=あんスタ" class="icon"></td><td class="game-name">あんスタMusic</td><td class="stock ok">在庫あり</td><td class="count">6件</td></tr>
+        <td style="text-align:center"><img src="https://via.placeholder.com/48/E91E63/FFF?text=あんスタ" class="icon"></td><td class="game-name">あんスタMusic</td><td class="stock ok">在庫あり</td><td class="count">6件</td></tr>
         <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/FF4081/FFF?text=NIKKE" class="icon"></td><td class="game-name">NIKKE</td><td class="stock ok">在庫あり</td><td class="count">25件</td></tr>
         <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/9C27B0/FFF?text=アズレン" class="icon"></td><td class="game-name">アズールレーン</td><td class="stock ok">在庫あり</td><td class="count">7件</td></tr>
         <tr><td style="text-align:center"><img src="https://via.placeholder.com/48/4CAF50/FFF?text=アークナイツ" class="icon"></td><td class="game-name">アークナイツ</td><td class="stock ok">在庫あり</td><td class="count">8件</td></tr>
@@ -235,15 +231,6 @@ input.addEventListener("keyup", function() {
   });
 });
 </script>
-<script>
-function toggleDetail(id) {
-  const el = document.getElementById(id);
-  if (el.style.display === "table-row") {
-    el.style.display = "none";
-  } else {
-    el.style.display = "table-row";
-  }
-}
-</script>
+
 </body>
 </html>
