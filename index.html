@@ -99,48 +99,26 @@ input {
 
 /* 1行ごとのレイアウト（左に文字、右に金額） */
 .price-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px dashed #eee;
-}
-
-/* 商品説明の文字 */
-.item-text {
-    font-size: 13px;
-    color: #333;
-    padding-right: 10px;
-    line-height: 1.4;
-    white-space: normal;
-
-    word-break: break-word;
-
-    flex: 1; 
-}
-
-/* 金額の文字（強調） */
-.item-price {
-    font-size: 15px;
-    font-weight: bold;
-    color: #d32f2f;
-    white-space: nowrap; /* 金額が改行されないように */
-}
-.price-list-item {
   display: flex;
-  flex-direction: column; /* ←これ追加 */
-  gap: 5px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
   padding: 10px 0;
   border-bottom: 1px dashed #ccc;
 }
 
-.item-price {
-  align-self: flex-end; /* 右寄せ */
+/* 商品名 */
+.item-text {
+  flex: 2;
+  font-size: 13px;
 }
-.buy-btn {
-  padding: 6px;
-  font-size: 21px;
+
+/* 在庫 */
+.item-stock {
+  font-size: 12px;
+  white-space: nowrap;
 }
+
 .stock-ok {
   color: green;
   font-weight: bold;
@@ -149,6 +127,24 @@ input {
 .stock-ng {
   color: gray;
   font-weight: bold;
+}
+
+/* 価格 */
+.item-price {
+  font-weight: bold;
+  color: red;
+  white-space: nowrap;
+}
+
+/* ボタン */
+.buy-btn {
+  background: #1da1f2;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 12px;
+  white-space: nowrap;
 }
 </style>
 </head>
@@ -210,12 +206,14 @@ input {
   <div id="d_monst" class="detail">
 
     <div class="price-list-item">
-      <div class="item-text">① オーブ1500〜1800個前後</div>
-      <div class="item-price">1000円</div>
-      <a href="https://x.com/_hanakage_" class="buy-btn">
-  購入する
-</a>
-    </div>
+  <div class="item-text">① オーブ1500〜1800個前後</div>
+
+  <div class="item-stock stock-ok">在庫あり</div>
+
+  <div class="item-price">1000円</div>
+
+  <a href="https://x.com/_hanakage_" class="buy-btn">購入</a>
+</div>
 
     <div class="price-list-item">
       <div class="item-text">② オーブ2000〜2500個前後</div>
