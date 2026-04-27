@@ -126,7 +126,21 @@ input {
     color: #d32f2f;
     white-space: nowrap; /* 金額が改行されないように */
 }
+.price-list-item {
+  display: flex;
+  flex-direction: column; /* ←これ追加 */
+  gap: 5px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
 
+.item-price {
+  align-self: flex-end; /* 右寄せ */
+}
+.buy-btn {
+  padding: 6px;
+  font-size: 13px;
+}
 </style>
 </head>
 
