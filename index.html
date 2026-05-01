@@ -506,18 +506,24 @@ input.addEventListener("input", () => {
     }
   });
 });
-</script>
 <script>
 function toggleDetail(id) {
-  const all = document.querySelectorAll(".detail");
-  all.forEach(el => {
-    if (el.id !== id) el.style.display = "none";
-  });
+  const all = document.querySelectorAll('.detail');
 
-  const target = document.getElementById(id);
-  target.style.display = (target.style.display === "block") ? "none" : "block";
+  all.forEach(el => {
+    if (el.id === id) {
+      // 自分だけトグル
+      if (el.style.display === 'block') {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+      }
+    } else {
+      // 他は全部閉じる
+      el.style.display = 'none';
+    }
+  });
 }
 </script>
-
 </body>
 </html>
