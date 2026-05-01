@@ -354,30 +354,5 @@ function toggleDetail(id){
 
 </script>
 
-<script>
-const input = document.getElementById("searchInput");
-
-input.addEventListener("input", () => {
-  const keyword = input.value.toLowerCase();
-  const cards = document.querySelectorAll(".card");
-
-  cards.forEach(card => {
-    const name = card.dataset.name.toLowerCase();
-    const detail = card.nextElementSibling;
-
-    if (name.includes(keyword)) {
-      card.style.display = "";
-      if (detail) detail.style.display = "none";
-    } else {
-      card.style.display = "none";
-      if (detail) detail.style.display = "none";
-    }
-  });
-
-  // 👇これ追加（重要）
-  document.getElementById("cardList").scrollIntoView({ behavior: "smooth" });
-});
-</script>
-
 </body>
 </html>
