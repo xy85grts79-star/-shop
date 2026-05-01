@@ -2,14 +2,13 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>花影shop</title>
 
 <style>
 body {
-  font-family: -apple-system, Arial;
   margin: 0;
+  font-family: -apple-system, Arial;
   background: #f9f5f0;
 }
 
@@ -21,29 +20,23 @@ header {
 }
 
 input {
-    width: 90%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: none;
-    
-    font-size: 16px !important; 
-    font-family: "Hiragino Maru Gothic ProN", sans-serif !important;
-   
+  width: 90%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: none;
 }
 
-
-/* 注意書き */
+/* 説明 */
 .description {
   background: white;
   margin: 15px;
   padding: 15px;
   border-radius: 12px;
 }
-
 .description pre {
   white-space: pre-wrap;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 /* カード */
@@ -53,116 +46,77 @@ input {
   padding: 15px;
   border-radius: 12px;
 }
-
 .card-top {
   display: flex;
-  gap: 10px;
   align-items: center;
+  gap: 10px;
 }
-
 .icon {
   width: 48px;
   border-radius: 8px;
 }
-
 .name {
   font-weight: bold;
 }
-
 .count {
   color: red;
 }
 
+/* 詳細 */
 .detail {
   display: none;
   background: #eee;
   margin: 10px;
   padding: 10px;
-  border-radius: 8px;
-}
-/* リスト全体の余白 */
-.detail {
-    padding: 10px 15px !important;
+  border-radius: 10px;
 }
 
-/* カテゴリ見出しのスタイル */
-.category-header {
-    background: #f9f5f0;
-    color: #6d4c41;
-    font-weight: bold;
-    padding: 8px;
-    margin: 15px 0 10px 0;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 14px;
-}
-
-/* 1行ごとのレイアウト（左に文字、右に金額） */
+/* 商品 */
 .price-list-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 0;
-    border-bottom: 1px dashed #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed #ddd;
 }
 
-/* 左側（番号＋説明） */
-.item-left {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-/* 商品テキスト */
 .item-text {
-    font-size: 14px;
-    color: #333;
-    line-height: 1.5;
-    word-break: break-word;
+  flex: 1;
+  font-size: 14px;
 }
 
-/* 右側（価格・在庫・ボタン） */
 .item-right {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-/* 価格 */
 .item-price {
-    font-size: 18px;
-    font-weight: bold;
-    color: #d32f2f;
-    white-space: nowrap;
+  font-weight: bold;
+  color: #d32f2f;
 }
 
-/* 在庫 */
-.item-stock {
-    font-size: 13px;
-    font-weight: bold;
-    white-space: nowrap;
-}
+.stock-ok { color: green; }
+.stock-ng { color: gray; }
 
-.stock-ok {
-    color: green;
-}
-
-.stock-ng {
-    color: gray;
-}
-
-/* 購入ボタン */
 .buy-btn {
-    background: #2196f3;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-size: 13px;
-    white-space: nowrap;
+  background: #2196f3;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 12px;
 }
 
+/* カテゴリ */
+.category-header {
+  background: #f9f5f0;
+  padding: 8px;
+  margin: 15px 0 5px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
 </style>
 </head>
 
@@ -173,318 +127,209 @@ input {
 <input id="searchInput" placeholder="ゲーム名で検索">
 </header>
 
-<!-- 注意書き -->
+<!-- 説明 -->
 <div class="description">
 <pre>
 ⚠️注意事項(超重要)⚠️
 ────────────────────────
-現在私のアイコン等を使った偽アカウントがいるため実績が荒らされています。
+現在私のアイコン等を使った偽アカウントが存在します。
 2026年1月までの実績のみ当店のものです。
 
-はじめに
-────────────────────────
-ご覧いただきありがとうございます🙇‍♂
-こちらは花影の石垢販売サイトです。
-購入時は私のTwitterのDMに以下を送信してください。
-①購入希望の商品名(ゲーム名と商品の内容)
-②お客様の機種
-③ご予算
+購入時はDMで
+①商品名
+②機種
+③予算
+を送信してください。
 
 🔥当店の特徴🔥
 ・安心･安全･即対応
 ・実績500件以上
-・豊富な品揃え・お手頃な価格
-
-石垢の事はぜひ当店におまかせください🙇‍♂
-初めての方でも安心してご購入・プレイできるよう安心サポートも完備しております🔥お気軽にお問い合わせください🙇‍♂
+・豊富な品揃え
 </pre>
 </div>
 
-<!-- 人気ゲーム一覧 -->
-<div style="padding:15px; font-weight:bold;">
+<!-- 人気 -->
+<div style="padding:15px;font-weight:bold;">
 🔥人気ゲーム一覧🔥
 </div>
 
-<div id="popularList">
-
-  <!-- モンスト -->
-  <div class="card" data-name="モンスト" onclick="toggleDetail('d_monst')">
-    <div class="card-top">
-      <img src="https://mixi.co.jp/app/uploads/old/entryimage/MS_App_icon_new.png" class="icon">
-      <div>
-        <div class="name">モンスト</div>
-        <div>在庫あり</div>
-      </div>
-    </div>
-    <div class="count">16件</div>
-  </div>
-
-  <!-- 詳細 -->
-  <div id="d_monst" class="detail">
-
-    <div class="price-list-item">
-
-  <div class="item-left">
-    <div class="item-text">
-      ① オーブ1500〜1800個前後
+<!-- モンスト -->
+<div class="card" data-name="モンスト" onclick="toggleDetail('d_monst')">
+  <div class="card-top">
+    <img src="https://mixi.co.jp/app/uploads/old/entryimage/MS_App_icon_new.png" class="icon">
+    <div>
+      <div class="name">モンスト</div>
+      <div>在庫あり</div>
     </div>
   </div>
+  <div class="count">16件</div>
+</div>
 
-  <div class="item-right">
-    <div class="item-price">1000円</div>
-    <div class="item-stock stock-ok">在庫あり</div>
-    <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢①オーブ1500〜1800個前後を購入希望です%0A機種：%0A予算：" class="buy-btn">購入</a>
+<div id="d_monst" class="detail">
+
+  <!-- 通常 -->
+  <div class="price-list-item">
+    <div class="item-text">① オーブ1500〜1800個前後</div>
+    <div class="item-right">
+      <div class="item-price">1000円</div>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト①オーブ1500〜1800個前後を購入希望です%0A機種：%0A予算：">購入</a>
+    </div>
   </div>
 
-</div>
-  </div>
-
-</div>
-</div>
-
-    <div class="price-list-item">
-      <div class="item-text">② オーブ2000〜2500個前後</div>
+  <div class="price-list-item">
+    <div class="item-text">② オーブ2000〜2500個前後</div>
+    <div class="item-right">
       <div class="item-price">3500円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢②オーブ2000〜2500個前後を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト②オーブ2000〜2500個前後を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">③ オーブ2200〜2500個前後 + ★6キャラ10〜45体前後</div>
+  <div class="price-list-item">
+    <div class="item-text">③ オーブ2200〜2500個前後 + ★6キャラ10〜45体</div>
+    <div class="item-right">
       <div class="item-price">4000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢③オーブ2200〜2500個前後+★6キャラ10〜45体前後を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト③オーブ2200〜2500個前後+★6キャラ10〜45体を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="category-header">✨ ガチャ限大量石垢 ✨</div>
+  <!-- ガチャ限 -->
+  <div class="category-header">✨ ガチャ限大量石垢 ✨</div>
 
-    <div class="price-list-item">
-      <div class="item-text">① オーブ1500〜1800個前後 + ヤクモ + ガチャ限多数</div>
+  <div class="price-list-item">
+    <div class="item-text">① オーブ1500〜1800個前後 + ヤクモ + ガチャ限多数</div>
+    <div class="item-right">
       <div class="item-price">2000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢①オーブ1500〜1800個前後+ヤクモ+ガチャ限多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト①オーブ1500〜1800個前後+ヤクモ+ガチャ限多数を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">② オーブ2000〜2300個前後 + ガチャ限多数</div>
+  <div class="price-list-item">
+    <div class="item-text">② オーブ2000〜2300個前後 + ガチャ限多数</div>
+    <div class="item-right">
       <div class="item-price">2500円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢②オーブ2000〜2300個前後+ガチャ限多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト②オーブ2000〜2300個前後+ガチャ限多数を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">③ オーブ2500〜2800個前後 + ルシファー + ガチャ限多数</div>
+  <div class="price-list-item">
+    <div class="item-text">③ オーブ2500〜2800個前後 + ルシファー + ガチャ限多数</div>
+    <div class="item-right">
       <div class="item-price">4000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢③オーブ2500〜2800個前後+ルシファー+ガチャ限多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト③オーブ2500〜2800個前後+ルシファー+ガチャ限多数を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">④ オーブ2400〜2900個前後 + ヤクモ + ガチャ限多数</div>
+  <div class="price-list-item">
+    <div class="item-text">④ オーブ2400〜2900個前後 + ヤクモ + ガチャ限多数</div>
+    <div class="item-right">
       <div class="item-price">5000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢④オーブ2400〜2900個前後+ヤクモ+ガチャ限多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト④オーブ2400〜2900個前後+ヤクモ+ガチャ限多数を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="category-header">🌟 限定キャラ付属石垢 🌟</div>
+  <!-- 限定 -->
+  <div class="category-header">🌟 限定キャラ付属石垢 🌟</div>
 
-    <div class="price-list-item">
-      <div class="item-text">① オーブ2500個前後 + 限定キャラ15〜20体 + ルシファー</div>
+  <div class="price-list-item">
+    <div class="item-text">① オーブ2500個前後 + 限定15〜20体 + ルシファー</div>
+    <div class="item-right">
       <div class="item-price">5000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢①オーブ2500個前後+限定キャラ15体〜20体前後+ルシファーを購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト①オーブ2500個前後+限定15〜20体+ルシファーを購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="category-header">🔥 キャラ確定石垢 🔥</div>
+  <!-- 確定 -->
+  <div class="category-header">🔥 キャラ確定石垢 🔥</div>
 
-    <div class="price-list-item">
-      <div class="item-text">① オーブ1300〜1500個前後 + ルシファー</div>
+  <div class="price-list-item">
+    <div class="item-text">① オーブ1300〜1500個前後 + ルシファー</div>
+    <div class="item-right">
       <div class="item-price">1500円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢①オーブ1300〜1500個前後+ルシファーを購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト①オーブ1300〜1500個前後+ルシファーを購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">② オーブ1500〜1800個前後 + ヤクモ + ★6キャラ10〜30体</div>
+  <div class="price-list-item">
+    <div class="item-text">② オーブ1500〜1800個前後 + ヤクモ + ★6キャラ10〜30体</div>
+    <div class="item-right">
       <div class="item-price">1800円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢②オーブ1500〜1800個前後+ヤクモ+★6キャラ10〜30体を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト②オーブ1500〜1800個前後+ヤクモ+★6キャラ10〜30体を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">③ オーブ2700〜3000個前後 + ヤクモ + ガチャ限多数</div>
+  <div class="price-list-item">
+    <div class="item-text">③ オーブ2700〜3000個前後 + ヤクモ + ガチャ限多数</div>
+    <div class="item-right">
       <div class="item-price">5500円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢③オーブ2700〜3000個前後+ヤクモ+ガチャ限多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト③オーブ2700〜3000個前後+ヤクモ+ガチャ限多数を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">④ オーブ3700〜3900個前後 + 限定キャラ20〜35体 前後+ ルシファー + エル</div>
+  <div class="price-list-item">
+    <div class="item-text">④ オーブ3700〜3900個前後 + 限定20〜35体 + ルシファー + エル</div>
+    <div class="item-right">
       <div class="item-price">13000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢④オーブ3700〜3900個前後+限定キャラ20〜35体前後+ルシファー+エルを購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト④オーブ3700〜3900個前後+限定20〜35体+ルシファー+エルを購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">⑤ オーブ4300個前後 + 限定キャラ25〜45体 + ランダムコラボ多数</div>
+  <div class="price-list-item">
+    <div class="item-text">⑤ オーブ4300個前後 + 限定25〜45体 + コラボ多数</div>
+    <div class="item-right">
       <div class="item-price">20000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢⑤オーブ4300個前後+限定キャラ25〜45体前後+ランダムコラボキャラ多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト⑤オーブ4300個前後+限定25〜45体+コラボ多数を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">⑥ オーブ4200〜4800個前後 + ガチャ限・限定キャラ多数</div>
-      <div class="item-price">15000円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢⑥オーブ4200〜4800個前後+ガチャ限･限定キャラ多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+  <div class="price-list-item">
+    <div class="item-text">⑥ オーブ4200〜4800個前後 + ガチャ限・限定多数</div>
+    <div class="item-right">
+      <div class="item-price">18000円</div>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト⑥オーブ4200〜4800個前後+ガチャ限・限定多数を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">⑦ オーブ4000〜4200個前後 + ルシファー + エル + ガチャ限多数</div>
-      <div class="item-price">13500円</div>
-      <div class="item-stock stock-ng">在庫なし</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢⑥オーブ4200〜4800個前後+ルシファー+エル+ガチャ限多数を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
+  <div class="price-list-item">
+    <div class="item-text">⑦ オーブ3700〜3900個前後 + ルシファー + エル + ガチャ限多数</div>
+    <div class="item-right">
+      <div class="item-price">12000円</div>
+      <div class="stock-ng">在庫なし</div>
+      <a class="buy-btn" href="#">購入</a>
     </div>
+  </div>
 
-    <div class="price-list-item">
-      <div class="item-text">⑧ オーブ3600〜4000個前後 + ヤクモ + ★6キャラ10〜30体</div>
+  <div class="price-list-item">
+    <div class="item-text">⑧ オーブ3600〜4000個前後 + ヤクモ + ★6キャラ10〜30体</div>
+    <div class="item-right">
       <div class="item-price">9500円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト石垢⑧オーブ3600〜4000個前後+ヤクモ+★6キャラ10〜30体を購入希望です%0A機種：%0A予算：" class="buy-btn">
-購入
-</a>
-    </div>
-
-  </div>
-
-</div>
-
-
-<!-- 取り扱いゲーム一覧 -->
-<div style="padding:10px; font-weight:bold;">
-取り扱いゲーム一覧（50音順）
-</div>
-
-<div id="cardList">
-
-  <!-- アズレン -->
-  <div class="card" data-name="アズレン" onclick="toggleDetail('d_azur')">
-    <div class="card-top">
-      <img src="https://via.placeholder.com/48/9C27B0/FFF?text=アズレン" class="icon">
-      <div>
-        <div class="name">アズールレーン</div>
-        <div>在庫あり</div>
-      </div>
-    </div>
-    <div class="count">1件</div>
-  </div>
-
-  <div id="d_azur" class="detail">
-    <div class="price-list-item">
-      <div class="item-text">①石3500個前後+キューブ1200個前後+SSR21体前後+勲章･建造材2000前後</div>
-      <div class="item-price">1700円</div>
-      <div class="item-stock stock-ok">在庫あり</div>
-      <a href="https://twitter.com/messages/compose?recipient_id=1537773713718128640">
-  購入する
-</a>
+      <div class="stock-ok">在庫あり</div>
+      <a class="buy-btn" href="https://x.com/messages/compose?recipient_id=1537773713718128640&text=モンスト⑧オーブ3600〜4000個前後+ヤクモ+★6キャラ10〜30体を購入希望です%0A機種：%0A予算：">購入</a>
     </div>
   </div>
-
-
-  <!-- アナデン -->
-  <div class="card" data-name="アナデン" onclick="toggleDetail('d_anaden')">
-    <div class="card-top">
-      <img src="https://via.placeholder.com/48/FF9800/FFF?text=アナデン" class="icon">
-      <div>
-        <div class="name">アナデン</div>
-        <div>在庫あり</div>
-      </div>
-    </div>
-    <div class="count">11件</div>
-  </div>
-
-  <div id="d_anaden" class="detail">
-    <div class="price-list-item">
-      <div class="item-text">石8000個前後 + 星5キャラ</div>
-      <div class="item-price">3500円</div>
-    </div>
-  </div>
-
-
-  <!-- あんスタ -->
-  <div class="card" data-name="あんスタ" onclick="toggleDetail('d_anst')">
-    <div class="card-top">
-      <img src="https://via.placeholder.com/48/E91E63/FFF?text=あんスタ" class="icon">
-      <div>
-        <div class="name">あんスタMusic</div>
-        <div>在庫あり</div>
-      </div>
-    </div>
-    <div class="count">6件</div>
-  </div>
-
-  <div id="d_anst" class="detail">
-    <div class="price-list-item">
-      <div class="item-text">ダイヤ大量アカウント</div>
-      <div class="item-price">2500円</div>
-    </div>
-  </div>
-
-</div>
-
-<!-- パズドラ -->
-<div class="card" data-name="パズドラ" onclick="toggleDetail('d6')">
-<div class="card-top">
-<img src="https://via.placeholder.com/48/FF5722/FFF?text=パズ" class="icon">
-<div><div class="name">パズドラ</div><div>在庫あり</div></div>
-</div>
-<div class="count">12件</div>
-</div>
-<div id="d6" class="detail">高ランク垢</div>
-
-<!-- 必要ならここに他ゲームも追加できる -->
 
 </div>
 
 <script>
 function toggleDetail(id) {
-    // ↓ この1行を必ず最初に追加してください
-    event.stopPropagation(); 
+  const all = document.querySelectorAll('.detail');
 
-    const detail = document.getElementById(id);
-    if (detail.style.display === 'block') {
-        detail.style.display = 'none';
-    } else {
-        detail.style.display = 'block';
-    }
+  all.forEach(el => {
+    el.style.display = (el.id === id && el.style.display !== 'block') ? 'block' : 'none';
+  });
 }
 
 const input = document.getElementById("searchInput");
@@ -506,24 +351,7 @@ input.addEventListener("input", () => {
     }
   });
 });
-<script>
-function toggleDetail(id) {
-  const all = document.querySelectorAll('.detail');
-
-  all.forEach(el => {
-    if (el.id === id) {
-      // 自分だけトグル
-      if (el.style.display === 'block') {
-        el.style.display = 'none';
-      } else {
-        el.style.display = 'block';
-      }
-    } else {
-      // 他は全部閉じる
-      el.style.display = 'none';
-    }
-  });
-}
 </script>
+
 </body>
 </html>
