@@ -108,22 +108,25 @@ input {
 
 .review-summary {
   text-align: center;
-  margin: 15px;
+  margin: 22px;
 }
 
 .stars {
   color: gold;
-  font-size: 22px;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .score {
-  font-size: 14px;
+  font-size: 25px;
   color: #555;
+  margin-top: 5px;
 }
 
 .review-box {
+min-width: 300px;
   background: white;
-  margin: 10px;
+  margin: 13px;
   padding: 15px;
   border-radius: 12px;
 }
@@ -139,12 +142,12 @@ input {
 
 .review-stars {
   color: gold;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .review-text {
-  font-size: 14px;
-  margin-top: 5px;
+  font-size: 17px;
+  margin-top: 7px;
 }
 
 /* ふわっと表示 */
@@ -188,7 +191,7 @@ input {
 
 .stars {
   color: gold;
-  font-size: 22px;
+  font-size: 35px;
   animation: pop 0.6s ease;
 }
 
@@ -238,6 +241,13 @@ input {
 /* ホバーで止める */
 .review-slider:hover .review-track {
   animation-play-state: paused;
+}
+
+.review-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 3px;
 }
 
 </style>
@@ -301,33 +311,39 @@ input {
   <div class="review-track">
 
     <div class="review">
+    <div class="review-name">ユーザーA</div>
       <div class="review-stars">★★★★★</div>
       <div class="review-text">対応がめちゃくちゃ早くて安心できました！</div>
     </div>
 
     <div class="review">
       <div class="review-stars">★★★★★</div>
+      <div class="review-name">ユーザーB</div>
       <div class="review-text">初めてでも丁寧で安心でした！</div>
     </div>
 
     <div class="review">
       <div class="review-stars">★★★★☆</div>
+      <div class="review-name">ユーザーC</div>
       <div class="review-text">少し待ったけど内容は完璧でした</div>
     </div>
 
     <!-- ↓ 無限ループ用に同じのをコピー -->
     <div class="review">
       <div class="review-stars">★★★★★</div>
+      <div class="review-name">ユーザーD</div>
       <div class="review-text">対応がめちゃくちゃ早くて安心できました！</div>
     </div>
 
     <div class="review">
       <div class="review-stars">★★★★★</div>
+      <div class="review-name">ユーザーE</div>
       <div class="review-text">初めてでも丁寧で安心でした！</div>
     </div>
 
     <div class="review">
       <div class="review-stars">★★★★☆</div>
+      <div class="review-name">ユーザーF</div>
       <div class="review-text">少し待ったけど内容は完璧でした</div>
     </div>
 
