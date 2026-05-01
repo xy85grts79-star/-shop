@@ -92,6 +92,15 @@ input {
 <h2>🎮花影shop🎮</h2>
 <input id="searchInput" placeholder="ゲーム名で検索">
 </header>
+<!-- 人気ゲーム一覧 -->
+
+<div style="padding:15px; font-weight:bold;">
+
+🔥人気ゲーム一覧🔥
+
+</div>
+
+<div id="popularList">
 
 <!-- モンスト -->
 <div class="card" onclick="toggleDetail('monst')">
@@ -215,7 +224,55 @@ input {
     <div class="stock-ng">在庫なし</div>
   </div>
 </div>
+<!-- プロスピ -->
 
+<div class="card" onclick="toggleDetail('prospi')">プロスピ</div>
+
+<div id="prospi" class="detail">
+
+  <div class="price-list-item">
+
+    <div class="item-text">Sランク多数アカウント</div>
+
+    <div class="item-right">
+
+      <div class="item-price">3000円</div>
+
+      <div class="stock-ok">在庫あり</div>
+
+      <a class="buy-btn" href="#">購入</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- バウンティ -->
+
+<div class="card" onclick="toggleDetail('bounty')">バウンティ</div>
+
+<div id="bounty" class="detail">
+
+  <div class="price-list-item">
+
+    <div class="item-text">虹ダイヤ大量 + フェス限</div>
+
+    <div class="item-right">
+
+      <div class="item-price">2500円</div>
+
+      <div class="stock-ok">在庫あり</div>
+
+      <a class="buy-btn" href="#">購入</a>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>
 
 </div>
 
