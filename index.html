@@ -106,6 +106,92 @@ input {
 .stock-ok { color: green; }
 .stock-ng { color: gray; }
 
+.review-summary {
+  text-align: center;
+  margin: 15px;
+}
+
+.stars {
+  color: gold;
+  font-size: 22px;
+}
+
+.score {
+  font-size: 14px;
+  color: #555;
+}
+
+.review-box {
+  background: white;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.review {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.review:last-child {
+  border-bottom: none;
+}
+
+.review-stars {
+  color: gold;
+  font-size: 16px;
+}
+
+.review-text {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* ふわっと表示 */
+.review-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* 各レビューを少しずつ遅れて表示 */
+.review {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+.review:nth-child(1) { animation-delay: 0.2s; }
+.review:nth-child(2) { animation-delay: 0.4s; }
+.review:nth-child(3) { animation-delay: 0.6s; }
+.review:nth-child(4) { animation-delay: 0.8s; }
+
+/* 星のポップ */
+.review-stars {
+  display: inline-block;
+  animation: pop 0.5s ease;
+}
+
+/* キーフレーム */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  60% { transform: scale(1.2); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.stars {
+  color: gold;
+  font-size: 22px;
+  animation: pop 0.6s ease;
+}
+
 </style>
 </head>
 
@@ -156,6 +242,29 @@ input {
 
 </div>
 
+<div class="review-summary">
+  <div class="stars">★★★★★</div>
+  <div class="score">4.9 / 5.0（レビュー132件）</div>
+</div>
+
+<div class="review-box">
+
+  <div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-text">対応がめちゃくちゃ早くて安心できました！</div>
+  </div>
+
+  <div class="review">
+    <div class="review-stars">★★★★★</div>
+    <div class="review-text">初めてだったけど丁寧に教えてくれた！</div>
+  </div>
+
+  <div class="review">
+    <div class="review-stars">★★★★☆</div>
+    <div class="review-text">少し待ったけど商品は完璧でした</div>
+  </div>
+
+</div>
 <!-- 人気ゲーム一覧 -->
 
 <div style="padding:15px; font-weight:bold;">
