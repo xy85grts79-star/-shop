@@ -192,6 +192,54 @@ input {
   animation: pop 0.6s ease;
 }
 
+/* スクロール出現 */
+.fade-target {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.6s;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* スライダー */
+.review-slider {
+  overflow: hidden;
+  margin: 15px;
+}
+
+.review-track {
+  display: flex;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+.review {
+  min-width: 250px;
+  background: white;
+  margin-right: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* 星 */
+.review-stars {
+  color: gold;
+}
+
+/* アニメーション */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ホバーで止める */
+.review-slider:hover .review-track {
+  animation-play-state: paused;
+}
+
 </style>
 </head>
 
@@ -242,28 +290,48 @@ input {
 
 </div>
 
-<div class="review-summary">
+<!-- 評価 -->
+<div class="review-summary fade-target">
   <div class="stars">★★★★★</div>
   <div class="score">4.9 / 5.0（レビュー132件）</div>
 </div>
 
-<div class="review-box">
+<!-- 横スライドレビュー -->
+<div class="review-slider fade-target">
+  <div class="review-track">
 
-  <div class="review">
-    <div class="review-stars">★★★★★</div>
-    <div class="review-text">対応がめちゃくちゃ早くて安心できました！</div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">対応がめちゃくちゃ早くて安心できました！</div>
+    </div>
+
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">初めてでも丁寧で安心でした！</div>
+    </div>
+
+    <div class="review">
+      <div class="review-stars">★★★★☆</div>
+      <div class="review-text">少し待ったけど内容は完璧でした</div>
+    </div>
+
+    <!-- ↓ 無限ループ用に同じのをコピー -->
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">対応がめちゃくちゃ早くて安心できました！</div>
+    </div>
+
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">初めてでも丁寧で安心でした！</div>
+    </div>
+
+    <div class="review">
+      <div class="review-stars">★★★★☆</div>
+      <div class="review-text">少し待ったけど内容は完璧でした</div>
+    </div>
+
   </div>
-
-  <div class="review">
-    <div class="review-stars">★★★★★</div>
-    <div class="review-text">初めてだったけど丁寧に教えてくれた！</div>
-  </div>
-
-  <div class="review">
-    <div class="review-stars">★★★★☆</div>
-    <div class="review-text">少し待ったけど商品は完璧でした</div>
-  </div>
-
 </div>
 <!-- 人気ゲーム一覧 -->
 
@@ -478,6 +546,22 @@ input.addEventListener("input", () => {
       if(detail) detail.style.display = "none";
     }
   });
+});
+</script>
+
+<script>
+const targets = document.querySelectorAll('.fade-target');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    }
+  });
+});
+
+targets.forEach(target => {
+  observer.observe(target);
 });
 </script>
 
