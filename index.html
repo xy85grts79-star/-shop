@@ -28,6 +28,28 @@ input {
   border: none;
 }
 
+/* 注意書き */
+
+.description {
+
+  background: white;
+
+  margin: 15px;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+}
+
+.description pre {
+
+  white-space: pre-wrap;
+
+  font-size: 13px;
+
+}
+
 /* カード */
 .card {
   background: white;
@@ -100,6 +122,49 @@ input {
 <h2>🎮花影shop🎮</h2>
 <input id="searchInput" placeholder="ゲーム名で検索">
 </header>
+
+<!-- 注意書き -->
+
+<div class="description">
+
+<pre>
+
+⚠️注意事項(超重要)⚠️
+
+────────────────────────
+
+現在私のアイコン等を使った偽アカウントがいるため実績が荒らされています。
+
+2026年1月までの実績のみ当店のものです。
+
+はじめに
+
+────────────────────────
+
+ご覧いただきありがとうございます🙇‍♂
+
+石垢販売サイトです。
+
+購入時はTwitterのDMに以下を送信してください。
+
+①商品名
+
+②機種
+
+③予算
+
+🔥当店の特徴🔥
+
+・安心･安全･即対応
+
+・実績500件以上
+
+・丁寧対応
+
+</pre>
+
+</div>
+
 <!-- 人気ゲーム一覧 -->
 
 <div style="padding:15px; font-weight:bold;">
@@ -112,7 +177,7 @@ input {
 
 <!-- モンスト -->
 <div class="card" onclick="toggleDetail('monst')">
-モンスト（タップで開く）
+モンスト
 </div>
 
 <div id="monst" class="detail">
@@ -293,6 +358,32 @@ function toggleDetail(id){
   const el = document.getElementById(id);
   el.style.display = (el.style.display === "block") ? "none" : "block";
 }
+
+</script>
+
+<script>
+const input = document.getElementById("searchInput");
+
+input.addEventListener("input", () => {
+  const keyword = input.value.toLowerCase();
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const name = card.dataset.name.toLowerCase();
+    const detail = card.nextElementSibling;
+
+    if (name.includes(keyword)) {
+      card.style.display = "";
+      if (detail) detail.style.display = "none";
+    } else {
+      card.style.display = "none";
+      if (detail) detail.style.display = "none";
+    }
+  });
+
+  // 👇これ追加（重要）
+  document.getElementById("cardList").scrollIntoView({ behavior: "smooth" });
+});
 </script>
 
 </body>
