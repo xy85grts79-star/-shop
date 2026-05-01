@@ -99,52 +99,68 @@ input {
 
 /* 1行ごとのレイアウト（左に文字、右に金額） */
 .price-list-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 10px 0;
-  border-bottom: 1px dashed #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    border-bottom: 1px dashed #ddd;
 }
 
-/* 商品名 */
+/* 左側（番号＋説明） */
+.item-left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* 商品テキスト */
 .item-text {
-  flex: 2;
-  font-size: 13px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+    word-break: break-word;
 }
 
-/* 在庫 */
-.item-stock {
-  font-size: 12px;
-  white-space: nowrap;
-}
-
-.stock-ok {
-  color: green;
-  font-weight: bold;
-}
-
-.stock-ng {
-  color: gray;
-  font-weight: bold;
+/* 右側（価格・在庫・ボタン） */
+.item-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* 価格 */
 .item-price {
-  font-weight: bold;
-  color: red;
-  white-space: nowrap;
+    font-size: 18px;
+    font-weight: bold;
+    color: #d32f2f;
+    white-space: nowrap;
 }
 
-/* ボタン */
+/* 在庫 */
+.item-stock {
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.stock-ok {
+    color: green;
+}
+
+.stock-ng {
+    color: gray;
+}
+
+/* 購入ボタン */
 .buy-btn {
-  background: #1da1f2;
-  color: white;
-  padding: 5px 8px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-size: 12px;
-  white-space: nowrap;
+    background: #2196f3;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    white-space: nowrap;
 }
 
 </style>
