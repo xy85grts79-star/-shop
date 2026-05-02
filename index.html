@@ -275,6 +275,41 @@ header {
   100% { background-position: 0% 50%; }
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 80%, rgba(255,120,0,0.25), transparent 60%),
+    radial-gradient(circle at 80% 90%, rgba(255,60,0,0.25), transparent 60%),
+    radial-gradient(circle at 50% 100%, rgba(255,0,0,0.3), transparent 70%);
+
+  animation: flameWave 6s ease-in-out infinite alternate;
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes flameWave {
+  0% {
+    transform: translateY(0) scale(1,1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05,1.1);
+  }
+  100% {
+    transform: translateY(10px) scale(1.1,0.95);
+  }
+}
+
+body {
+  position: relative;
+  z-index: 1;
+}
+
+animation: flameWave 10s ease-in-out infinite alternate;
+
 </style>
 </head>
 
