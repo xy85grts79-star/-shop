@@ -308,6 +308,10 @@ min-width: 300px;
 
 <!-- 横スライドレビュー -->
 <div class="review-slider fade-target">
+<div class="review-track">
+  A B C D E
+  A B C D E 
+</div>
   <div class="review-track">
 
     <div class="review">
@@ -332,19 +336,19 @@ min-width: 300px;
     <div class="review">
       <div class="review-stars">★★★★★</div>
       <div class="review-name">ユーザーD</div>
-      <div class="review-text">対応がめちゃくちゃ早くて安心できました！</div>
+      <div class="review-text">対応がめちゃくちゃ早くて詐欺なしでした！また利用させてもらいます☺</div>
     </div>
 
     <div class="review">
       <div class="review-stars">★★★★★</div>
       <div class="review-name">ユーザーE</div>
-      <div class="review-text">初めてでも丁寧で安心でした！</div>
+      <div class="review-text">丁寧な対応でまた利用したいと思いました。</div>
     </div>
 
     <div class="review">
       <div class="review-stars">★★★★☆</div>
       <div class="review-name">ユーザーF</div>
-      <div class="review-text">少し待ったけど内容は完璧でした</div>
+      <div class="review-text">引き継ぎのやり方で色々問題がありましたが手厚いサポートのおかげで無事に取引できました。</div>
     </div>
 
   </div>
@@ -579,6 +583,8 @@ const observer = new IntersectionObserver((entries) => {
 targets.forEach(target => {
   observer.observe(target);
 });
+document.querySelector(".review-track").innerHTML +=
+  document.querySelector(".review-track").innerHTML;
 </script>
 
 </body>
