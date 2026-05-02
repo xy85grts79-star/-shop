@@ -10,7 +10,8 @@
 body {
   font-family: -apple-system, Arial;
   margin: 0;
-  background: #f9f5f0;
+  background: #8B0000; /* 深い赤（ダークレッド） */
+  color: #fff;
 }
 
 header {
@@ -248,6 +249,47 @@ min-width: 300px;
   font-size: 14px;
   color: #333;
   margin-bottom: 3px;
+}
+
+.review {
+  background: #fff;
+  color: #333;
+}
+
+button {
+  background: #b30000;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background: #d40000;
+}
+
+header {
+  background: #660000;
+  color: white;
+  padding: 15px;
+}
+
+body {
+  background: linear-gradient(135deg, #8B0000, #4d0000);
+  color: #fff;
+}
+
+body {
+  background: linear-gradient(270deg, #8B0000, #660000, #4d0000);
+  background-size: 600% 600%;
+  animation: bgMove 35s ease infinite;
+  color: #fff;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 </style>
