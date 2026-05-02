@@ -12,9 +12,17 @@ body {
   margin: 0;
   color: #fff;
 
-  background: linear-gradient(270deg, #8B0000, #660000, #4d0000);
-  background-size: 600% 600%;
-  animation: bgMove 20s ease infinite;
+  background: linear-gradient(120deg, #8B0000, #ff5a00, #ffcc33, #8B0000);
+  background-size: 400% 400%;
+  animation: waveBg 12s ease-in-out infinite;
+}
+
+@keyframes waveBg {
+  0%   { background-position: 0% 50%; }
+  25%  { background-position: 50% 100%; }
+  50%  { background-position: 100% 50%; }
+  75%  { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
 }
 
 header {
