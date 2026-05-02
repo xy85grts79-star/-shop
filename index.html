@@ -275,40 +275,47 @@ header {
   100% { background-position: 0% 50%; }
 }
 
-body::after {
-  content: "";
-  position: fixed;
-  inset: 0;
+body {
+  font-family: -apple-system, Arial;
+  margin: 0;
+  color: #fff;
 
-  background:
-    radial-gradient(circle at 20% 80%, rgba(255,120,0,0.25), transparent 60%),
-    radial-gradient(circle at 80% 90%, rgba(255,60,0,0.25), transparent 60%),
-    radial-gradient(circle at 50% 100%, rgba(255,0,0,0.3), transparent 70%);
-
-  animation: flameWave 6s ease-in-out infinite alternate;
-
-  pointer-events: none;
-  z-index: 0;
+  background: linear-gradient(120deg, #8B0000, #ff3c00, #8B0000, #660000);
+  background-size: 300% 300%;
+  animation: waveBg 12s ease-in-out infinite;
 }
 
-@keyframes flameWave {
+@keyframes waveBg {
   0% {
-    transform: translateY(0) scale(1,1);
+    background-position: 0% 50%;
+  }
+  25% {
+    background-position: 50% 100%;
   }
   50% {
-    transform: translateY(-20px) scale(1.05,1.1);
+    background-position: 100% 50%;
+  }
+  75% {
+    background-position: 50% 0%;
   }
   100% {
-    transform: translateY(10px) scale(1.1,0.95);
+    background-position: 0% 50%;
   }
 }
 
 body {
-  position: relative;
-  z-index: 1;
+  background: linear-gradient(
+    120deg,
+    #8B0000,
+    #ff5a00,
+    #ffcc33,
+    #8B0000
+  );
+  background-size: 400% 400%;
+  animation: waveBg 15s ease-in-out infinite;
 }
 
-animation: flameWave 10s ease-in-out infinite alternate;
+animation: flameWave 16s ease-in-out infinite alternate;
 
 </style>
 </head>
