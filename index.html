@@ -22,15 +22,11 @@ header {
   padding: 15px;
   text-align: center;
 
-  background: linear-gradient(120deg, #8B0000, #ff5a00, #ffcc33, #8B0000);
-  background-size: 400% 400%;
-  animation: waveBg 15s ease-in-out infinite;
+  background: transparent; /* ←これが最重要 */
 }
 
 header {
-  background: linear-gradient(120deg, #660000, #ff3c00, #ff9900, #660000);
-  background-size: 400% 400%;
-  animation: waveBg 18s ease-in-out infinite;
+  backdrop-filter: blur(3px);
 }
 
 input {
