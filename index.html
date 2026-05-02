@@ -371,6 +371,23 @@ header h2 {
   margin: 20px;
 }
 
+.stars {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.stars::before {
+  content: "★★★★★";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 96%; 
+  overflow: hidden;
+  color: gold;
+}
+
 </style>
 </head>
 
@@ -423,8 +440,10 @@ header h2 {
 
 <!-- 評価 -->
 <div class="review-summary fade-target">
-  <div class="stars">★★★★★</div>
-  <div class="score">4.9 / 5.0（レビュー132件）</div>
+  <div class="stars">
+  <span>★★★★★</span>
+</div>
+  <div class="score">4.7 / 5.0</div>
 </div>
 
 <!-- 横スライドレビュー -->
