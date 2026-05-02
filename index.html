@@ -65,6 +65,10 @@ input::placeholder {
   color: rgba(255,255,255,0.7);
 }
 
+input {
+  font-size: 16px;
+}
+
 /* 注意書き */
 
 .description {
@@ -362,6 +366,11 @@ header h2 {
   text-shadow: 0 0 10px rgba(255,100,0,0.8);
 }
 
+.search-bottom {
+  text-align: center;
+  margin: 20px;
+}
+
 </style>
 </head>
 
@@ -461,6 +470,10 @@ header h2 {
     </div>
 
   </div>
+</div>
+
+<div class="search-bottom">
+  <input id="searchInput2" placeholder="ゲーム名で検索">
 </div>
 <!-- 人気ゲーム一覧 -->
 
@@ -657,23 +670,25 @@ function toggleDetail(id){
 }
 </script>
 <script>
-const input = document.getElementById("searchInput");
+const inputs = document.querySelectorAll("#searchInput, #searchInput2");
 
-input.addEventListener("input", () => {
-  const keyword = input.value.toLowerCase();
-  const cards = document.querySelectorAll(".card");
+inputs.forEach(input => {
+  input.addEventListener("input", () => {
+    const keyword = input.value.toLowerCase();
+    const cards = document.querySelectorAll(".card");
 
-  cards.forEach(card => {
-    const text = card.textContent.toLowerCase();
-    const detail = card.nextElementSibling;
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      const detail = card.nextElementSibling;
 
-    if (text.includes(keyword)) {
-      card.style.display = "";
-      if(detail) detail.style.display = "none";
-    } else {
-      card.style.display = "none";
-      if(detail) detail.style.display = "none";
-    }
+      if (text.includes(keyword)) {
+        card.style.display = "";
+        if(detail) detail.style.display = "none";
+      } else {
+        card.style.display = "none";
+        if(detail) detail.style.display = "none";
+      }
+    });
   });
 });
 </script>
