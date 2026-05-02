@@ -308,10 +308,6 @@ min-width: 300px;
 
 <!-- 横スライドレビュー -->
 <div class="review-slider fade-target">
-<div class="review-track">
-  A B C D E
-  A B C D E 
-</div>
   <div class="review-track">
 
     <div class="review">
@@ -336,7 +332,8 @@ min-width: 300px;
     <div class="review">
       <div class="review-stars">★★★★★</div>
       <div class="review-name">ユーザーD</div>
-      <div class="review-text">対応がめちゃくちゃ早くて詐欺なしでした！また利用させてもらいます☺</div>
+      <div class="review-text">対応がめちゃくちゃ早くて詐欺なしでした！
+      また利用させてもらいます☺</div>
     </div>
 
     <div class="review">
@@ -585,6 +582,20 @@ targets.forEach(target => {
 });
 document.querySelector(".review-track").innerHTML +=
   document.querySelector(".review-track").innerHTML;
+</script>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".review-track");
+  track.innerHTML += track.innerHTML;
+});
+</script>
+
+<script>
+window.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".review-track");
+  track.innerHTML += track.innerHTML;
+});
 </script>
 
 </body>
